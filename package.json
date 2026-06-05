@@ -1,0 +1,31 @@
+{
+  "name": "ex-f5-admin-dashboard-app",
+  "version": "1.0.0",
+  "description": "Aplicación web dinámica de tipo dashboard administrativo para la gestión de empleados, desarrollada como proyecto de bootcamp.",
+  "homepage": "https://github.com/Alexapop/ex-f5-admin-dashboard-app#readme",
+  "bugs": {
+    "url": "https://github.com/Alexapop/ex-f5-admin-dashboard-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexapop/ex-f5-admin-dashboard-app.git"
+  },
+  "license": "ISC",
+  "author": "Ioana",
+  "type": "module",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {},
+  "dependencies": {
+    "saas": "^1.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "sass": "^1.100.0",
+    "vitest": "^4.1.8"
+  }
+}
