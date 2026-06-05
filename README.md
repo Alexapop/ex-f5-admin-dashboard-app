@@ -186,7 +186,9 @@ Este proyecto simula un **dashboard administrativo** que permite:
 ## 📦 Instalación
 ```
 npm init     
-npm install     # saas/vitest/ playwright
+npm install -D sass
+npm install -D vitest
+npm init playwright@latest
 npm run test    # ejecutar tests
 ````
 
