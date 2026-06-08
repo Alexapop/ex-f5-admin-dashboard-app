@@ -12,7 +12,6 @@ header {
     font-weight: 700;
   }
 }
-
 .filter-by-name {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -95,7 +94,6 @@ header {
     object-fit: contain;
     opacity: 0.65;
     pointer-events: none;
-   display: inline-block;
     z-index: 1;
   }
 
@@ -177,22 +175,19 @@ header {
 .login-image-panel {
   display: none;
 }
-@media (min-width: 768px) {
-  .login-session,
-  .session-card {
-    max-width: 392px;
-  }
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
   .login-page {
-    width: min(100%, 1080px);
+    width: 100vw;
     max-width: none;
-    min-height: 840px;
-    margin: 36px auto;
+    height: 100vh;
+    min-height: 0;
+    margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
     grid-template-rows: 1fr auto auto 1fr;
+    overflow: hidden;
     background: $panel;
   }
 
@@ -200,13 +195,17 @@ header {
     grid-column: 1;
     grid-row: 1 / -1;
     display: grid;
-    grid-template-rows: 1fr 170px;
+    grid-template-rows: clamp(360px, 62vh, 620px) 1fr;
+    height: 100vh;
     overflow: hidden;
-    background: linear-gradient(180deg, #f8f9ff, $page);
+    background: linear-gradient(130deg, #f8f9ff, $page);
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
+      min-width: 0;
+      min-height: 0;
       object-fit: cover;
     }
   }
@@ -252,5 +251,62 @@ header {
     border: 0;
     box-shadow: none;
   }
-}
+
+  .active-session-page {
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    min-height: 0;
+    margin: 0;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .active-session-page .admin-panel {
+    width: min(100%, 520px);
+    margin-bottom: 38px;
+    padding-top: 0;
+
+    img {
+      width: 82px;
+      height: 82px;
+      margin-bottom: 26px;
+      border-radius: 18px;
+    }
+
+    h1 {
+      font-size: 34px;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+  }
+
+  .active-session-page .session-card {
+    width: min(100%, 560px);
+    max-width: 560px;
+    padding: 44px 56px;
+
+    h3 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    p:first-child::after {
+      height: 5px;
+      margin: 34px 0 20px;
+    }
+
+    p:last-child {
+      font-size: 15px;
+    }
+  }
 }
