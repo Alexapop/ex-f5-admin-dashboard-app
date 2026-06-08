@@ -3,8 +3,8 @@ import { saveSession } from "./session.js";
 const adminEmail = "admindash@example.com";
 const adminPassword = "loginadmin12";
 
-function isEmailValid(email) {
-  return /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(email);
+export function isEmailValid(email) {
+   return /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/.test(email);
 }
 
 function isPasswordValid(password) {
