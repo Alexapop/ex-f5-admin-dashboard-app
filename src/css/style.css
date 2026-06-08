@@ -55,6 +55,18 @@ input {
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  .layout-session {
+    width: 560px;
+    min-height: 920px;
+    margin: 16px auto 0 16px;
+    padding: 0 72px 40px;
+  }
+  .admin-panel {
+    margin-bottom: 32px;
+    padding-top: 230px;
+  }
+}
 #employees-grid {
   display: grid;
   gap: 24px;
@@ -251,6 +263,13 @@ header h1 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+@media (min-width: 768px) {
+  .login-session,
+  .session-card {
+    max-width: 392px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

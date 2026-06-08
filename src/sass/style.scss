@@ -173,3 +173,10 @@ header {
     letter-spacing: 0.04em;
   }
 }
+
+@media (min-width: 768px) {
+  .login-session,
+  .session-card {
+    max-width: 392px;
+  }
+}
