@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f2f2f2;
+  font-family: $font-main;
+  color: $text;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font-family: $font-main;
+}
+
+.layout-session {
+  width: min(100%, 360px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+  color: $text;
+  background: linear-gradient(180deg, $panel 0%, #f6f8ff 65%, $page 100%);
+}
+
+.admin-panel {
+  margin: 0 0 30px;
+  padding-top: 190px;
+  text-align: center;
+
+  img {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 18px;
+    padding: 0;
+    border-radius: 14px;
+    background: transparent;
+    box-shadow: none;
+    object-fit: contain;
+  }
+
+  h1 {
+    margin: 0;
+    color: $primary;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  h2 {
+    margin: 8px 0 0;
+    color: $muted;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
