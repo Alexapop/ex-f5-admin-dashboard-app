@@ -161,25 +161,63 @@ Este proyecto simula un **dashboard administrativo** que permite:
 |-- docs/
 |   `-- assets/
 |       |-- icon/
+|       |   |-- icon-directory.png
+|       |   |-- icon-email.png
+|       |   |-- icon-logout.png
+|       |   `-- icon-password.png
 |       `-- logo/
+|           `-- logo-login-page.png
 |-- img/
 |   |-- employees/
+|   |   |-- employee1.png
+|   |   |-- employee2.png
+|   |   |-- employee3.png
+|   |   |-- employee4.png
+|   |   |-- employee5.png
+|   |   |-- employee6.png
+|   |   |-- employee7.png
+|   |   |-- employee8.png
+|   |   |-- employee9.png
+|   |   `-- employee10.png
 |   |-- Jira/
-|   |-- tests/
-|   `-- office-interior-login-page.png
+|   |   |-- backlog-jira.jpg
+|   |   |-- board-jira.jpg
+|   |   |-- epicas-jira.jpg
+|   |   `-- user-flow-jira.jpg
+|   `-- test-screenshots/
+|       |-- playwright.jpg
+|       `-- vitest.jpg
 |-- src/
 |   |-- css/
-|   |   `-- global.css
+|   |   |-- style.css
+|   |   `-- style.css.map
 |   |-- js/
+|   |   |-- api.js
+|   |   |-- auth.js
+|   |   |-- employees.js
+|   |   |-- filters.js
+|   |   `-- session.js
 |   |-- pages/
+|   |   |-- active-session.html
+|   |   |-- employee-directory.html
+|   |   `-- login-page.html
 |   `-- sass/
-|       `-- globals.css
+|       |-- _employee-card.scss
+|       |-- _global.scss
+|       |-- _variables.scss
+|       `-- style.scss
 |-- tests/
 |   |-- e2e/
+|   |   |-- example.spec.js
+|   |   `-- login-flow.spec.js
 |   `-- unit/
+|       `-- auth.test.js
 |-- .gitignore
 |-- index.html
 |-- main.js
+|-- package-lock.json
+|-- package.json
+|-- playwright.config.js
 `-- README.md
 ```
 
@@ -191,6 +229,15 @@ npm install -D vitest
 npm init playwright@latest
 npm run test    # ejecutar tests
 ````
+
+##✅Tests
+- ![Vitest](./img/test-screenshots/vitest.jpg)
+- ![Playwright](./img/test-screenshots/playwright.jpg)
+
+# Demo Login Admin
+##email: admindash@example.com
+##password:loginadmin12
+
 
 ## ✒️ Autor
 - **Ioana** - (https://github.com/Alexapop)
