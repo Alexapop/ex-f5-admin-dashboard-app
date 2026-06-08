@@ -265,10 +265,77 @@ header h1 {
   letter-spacing: 0.04em;
 }
 
+.login-image-panel {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .login-session,
   .session-card {
     max-width: 392px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .login-page {
+    width: min(100%, 1080px);
+    max-width: none;
+    min-height: 840px;
+    margin: 36px auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto auto 1fr;
+    background: #F8F9FF;
+  }
+  .login-image-panel {
+    grid-column: 1;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 1fr 170px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #f8f9ff, #D3E4FE);
+  }
+  .login-image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .desktop-info-card {
+    width: 420px;
+    align-self: center;
+    justify-self: center;
+    padding: 24px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  .desktop-info-card h2 {
+    margin: 0 0 10px;
+    color: #00288E;
+    font-size: 28px;
+  }
+  .desktop-info-card p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .login-page .admin-panel {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+    margin-bottom: 28px;
+  }
+  .login-page .login-session {
+    grid-column: 2;
+    grid-row: 3;
+    width: 320px;
+    max-width: 320px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 }
 
