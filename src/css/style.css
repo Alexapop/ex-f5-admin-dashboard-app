@@ -55,18 +55,6 @@ input {
   font-weight: 400;
 }
 
-@media (min-width: 768px) {
-  .layout-session {
-    width: 560px;
-    min-height: 920px;
-    margin: 16px auto 0 16px;
-    padding: 0 72px 40px;
-  }
-  .admin-panel {
-    margin-bottom: 32px;
-    padding-top: 230px;
-  }
-}
 #employees-grid {
   display: grid;
   gap: 24px;
@@ -197,7 +185,6 @@ header h1 {
   object-fit: contain;
   opacity: 0.65;
   pointer-events: none;
-  display: inline-block;
   z-index: 1;
 }
 .login-session img:nth-of-type(1) {
@@ -270,34 +257,34 @@ header h1 {
 }
 
 @media (min-width: 768px) {
-  .login-session,
-  .session-card {
-    max-width: 392px;
-  }
-}
-@media (min-width: 768px) and (min-width: 768px) {
   .login-page {
-    width: min(100%, 1080px);
+    width: 100vw;
     max-width: none;
-    min-height: 840px;
-    margin: 36px auto;
+    height: 100vh;
+    min-height: 0;
+    margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
     grid-template-rows: 1fr auto auto 1fr;
+    overflow: hidden;
     background: #F8F9FF;
   }
   .login-image-panel {
     grid-column: 1;
     grid-row: 1/-1;
     display: grid;
-    grid-template-rows: 1fr 170px;
+    grid-template-rows: clamp(360px, 62vh, 620px) 1fr;
+    height: 100vh;
     overflow: hidden;
-    background: linear-gradient(180deg, #f8f9ff, #D3E4FE);
+    background: linear-gradient(130deg, #f8f9ff, #D3E4FE);
   }
   .login-image-panel img {
+    display: block;
     width: 100%;
     height: 100%;
+    min-width: 0;
+    min-height: 0;
     object-fit: cover;
   }
   .desktop-info-card {
@@ -336,6 +323,54 @@ header h1 {
     background: transparent;
     border: 0;
     box-shadow: none;
+  }
+  .active-session-page {
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    min-height: 0;
+    margin: 0;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .active-session-page .admin-panel {
+    width: min(100%, 520px);
+    margin-bottom: 38px;
+    padding-top: 0;
+  }
+  .active-session-page .admin-panel img {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 26px;
+    border-radius: 18px;
+  }
+  .active-session-page .admin-panel h1 {
+    font-size: 34px;
+  }
+  .active-session-page .admin-panel h2 {
+    font-size: 17px;
+  }
+  .active-session-page .session-card {
+    width: min(100%, 560px);
+    max-width: 560px;
+    padding: 44px 56px;
+  }
+  .active-session-page .session-card h3 {
+    font-size: 25px;
+  }
+  .active-session-page .session-card p {
+    font-size: 20px;
+  }
+  .active-session-page .session-card p:first-child::after {
+    height: 5px;
+    margin: 34px 0 20px;
+  }
+  .active-session-page .session-card p:last-child {
+    font-size: 15px;
   }
 }
 
