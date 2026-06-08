@@ -1,5 +1,6 @@
 import { initLoginPage } from "./src/js/auth.js";
 import { isLoggedIn } from "./src/js/session.js";
+import { initEmployeesPage } from "./src/js/employees.js";
 
 const page = document.body.dataset.page;
 
@@ -24,5 +25,7 @@ if (page === "active-session") {
 if (page === "employees") {
   if (!isLoggedIn()) {
     window.location.href = "./login-page.html";
+  } else {
+    initEmployeesPage();
   }
 }
