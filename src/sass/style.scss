@@ -1,0 +1,175 @@
+@use 'variables' as *;
+@use 'global';
+@use 'employee-card';
+
+header {
+  h,
+  h1 {
+    display: block;
+    margin: 0 0 18px;
+    color: $primary;
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+.filter-by-name {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  align-items: center;
+
+  label {
+    color: $text;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  input {
+    grid-column: 1 / -1;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    background: #edf2fc;
+    color: $text;
+  }
+}
+
+.all-btn,
+.login-btn {
+  border: 0;
+  border-radius: 8px;
+  background: $primary;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.all-btn {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.login-session,
+.session-card {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 24px;
+  background: $card;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.login-session {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  grid-template-rows: auto 46px auto 46px 46px;
+  gap: 12px;
+  padding: 26px 22px 28px;
+
+  label {
+    grid-column: 1 / -1;
+    color: $muted;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  label[for="email-login"] {
+    grid-row: 1;
+  }
+
+  label[for="password-login"] {
+    grid-row: 3;
+  }
+
+  img {
+    display: block;
+    width: 24px;
+    height: 20px;
+    align-self: center;
+    justify-self: center;
+    object-fit: contain;
+    opacity: 0.65;
+    pointer-events: none;
+   display: inline-block;
+    z-index: 1;
+  }
+
+  img:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+    width: 18px;
+    height: 18px;
+  }
+
+  img:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 4;
+    width: 50px;
+    height: 50px;
+  }
+
+  input {
+    grid-column: 1 / -1;
+    height: 46px;
+    padding: 0 14px 0 46px;
+    border: 1px solid #c9d2e5;
+    border-radius: 8px;
+    background: #f7f8ff;
+    z-index: 0;
+  }
+
+  #email-login {
+    grid-row: 2;
+  }
+
+  #password-login {
+    grid-row: 4;
+  }
+
+  .login-btn {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    height: 46px;
+    margin-top: 8px;
+    font-size: 18px;
+  }
+}
+
+.session-card {
+  padding: 24px 24px 26px;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0 0 16px;
+    color: $muted;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  p:first-child::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 26px 0 16px;
+    border-radius: 20px;
+    background: $primary;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+}
