@@ -9,44 +9,54 @@
 </head>
 
 <body data-page="employees">
-    <main class="layout-session">
-        <header>
-            <h1>Admin Dashboard</h1>
-        </header>
-        <section class="filter-by-name">
-            <button class="all-btn">All</button>
-            <label for="name-filter">Filter By Name First Letter</label>
-            <input type="search" id="name-filter" name="name-filter" placeholder="ENTER LETTER (E.G. A)">
-            <ul id="employees-list" style="display: none">
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li>D</li>
-                <li>E</li>
-                <li>F</li>
-                <li>G</li>
-                <li>H</li>
-                <li>I</li>
-                <li>J</li>
-                <li>K</li>
-                <li>L</li>
-                <li>M</li>
-                <li>N</li>
-                <li>O</li>
-                <li>P</li>
-                <li>Q</li>
-                <li>R</li>
-                <li>S</li>
-                <li>T</li>
-                <li>U</li>
-                <li>V</li>
-                <li>W</li>
-                <li>X</li>
-                <li>Y</li>
-                <li>Z</li>
-            </ul>
+    <main class="layout-session employee-dashboard-page">
+        <aside class="dashboard-sidebar">
+            <h2>Admin Dashboard</h2>
+            <button class="logout-btn" type="button">
+                <img src="../../docs/assets/icon/icon-logout.png" alt="" aria-hidden="true">
+                <span>Logout</span>
+            </button>
+        </aside>
+        <section class="dashboard-content">
+            <header class="dashboard-header">
+                <span class="dashboard-menu-icon" aria-hidden="true"></span>
+                <h1>Admin Dashboard</h1>
+            </header>
+            <section class="filter-by-name">
+                <button class="all-btn">All</button>
+                <label for="name-filter">Filter By Name First Letter</label>
+                <input type="search" id="name-filter" name="name-filter" placeholder="ENTER LETTER (E.G. A)">
+                <ul id="employees-list" style="display: none">
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                    <li>K</li>
+                    <li>L</li>
+                    <li>M</li>
+                    <li>N</li>
+                    <li>O</li>
+                    <li>P</li>
+                    <li>Q</li>
+                    <li>R</li>
+                    <li>S</li>
+                    <li>T</li>
+                    <li>U</li>
+                    <li>V</li>
+                    <li>W</li>
+                    <li>X</li>
+                    <li>Y</li>
+                    <li>Z</li>
+                </ul>
+            </section>
+            <div id="employees-grid"></div>
         </section>
-        <div id="employees-grid"></div>
     </main>
       <script type="module" src="../../main.js"></script>
 </body>

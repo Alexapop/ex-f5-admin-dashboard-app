@@ -12,6 +12,59 @@ header {
     font-weight: 700;
   }
 }
+
+.employee-dashboard-page {
+  position: relative;
+  padding-bottom: 88px;
+}
+
+.dashboard-sidebar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 10;
+  width: min(100%, 360px);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-top: 1px solid $border;
+  background: $panel;
+  box-shadow: 0 -4px 14px rgba(20, 40, 80, 0.06);
+
+  h2 {
+    display: none;
+  }
+}
+
+.logout-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  color: $text;
+  font-size: 11px;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-menu-icon {
+  display: none;
+}
+
 .filter-by-name {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -177,6 +230,104 @@ header {
 }
 
 @media (min-width: 768px) {
+  .employee-dashboard-page {
+    width: 100vw;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 310px minmax(0, 1fr);
+    background: $panel;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+    grid-column: 1;
+    width: auto;
+    height: 100vh;
+    padding: 230px 34px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 36px;
+    transform: none;
+    border-top: 0;
+    background: #eef4ff;
+    box-shadow: none;
+
+    h2 {
+      display: block;
+      margin: 0;
+      color: $primary;
+      font-size: 24px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+  }
+
+  .logout-btn {
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    color: $muted;
+    font-size: 14px;
+  }
+
+  .dashboard-content {
+    grid-column: 2;
+    width: min(100%, 1180px);
+    margin: 0 auto;
+    padding: 70px 40px 56px;
+  }
+
+  .dashboard-header {
+    gap: 14px;
+    margin-bottom: 26px;
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+  }
+
+  .dashboard-menu-icon {
+    width: 16px;
+    height: 12px;
+    display: block;
+    background:
+      linear-gradient($primary 0 0) 0 0 / 16px 2px no-repeat,
+      linear-gradient($primary 0 0) 0 5px / 16px 2px no-repeat,
+      linear-gradient($primary 0 0) 0 10px / 16px 2px no-repeat;
+  }
+
+  .employee-dashboard-page .filter-by-name {
+    grid-template-columns: auto auto minmax(260px, 380px);
+    gap: 0 22px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $border;
+
+    label {
+      font-size: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    input {
+      grid-column: auto;
+      height: 48px;
+      font-size: 13px;
+    }
+  }
+
+  .employee-dashboard-page .all-btn {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
   .login-page {
     width: 100vw;
     max-width: none;

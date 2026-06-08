@@ -1,8 +1,19 @@
 import { initLoginPage } from "./src/js/auth.js";
-import { isLoggedIn } from "./src/js/session.js";
+import { isLoggedIn, removeSession } from "./src/js/session.js";
 import { initEmployeesPage } from "./src/js/employees.js";
 
 const page = document.body.dataset.page;
+
+function initLogoutButtons() {
+  const logoutButtons = document.querySelectorAll(".logout-btn");
+
+  logoutButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      removeSession();
+      window.location.href = "./login-page.html";
+    });
+  });
+}
 
 if (page === "index") {
   if (isLoggedIn()) {
@@ -26,6 +37,7 @@ if (page === "employees") {
   if (!isLoggedIn()) {
     window.location.href = "./login-page.html";
   } else {
+    initLogoutButtons();
     initEmployeesPage();
   }
 }

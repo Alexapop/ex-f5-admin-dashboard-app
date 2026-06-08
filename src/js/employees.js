@@ -4,7 +4,7 @@ import { initEmployeeFilter } from "./filters.js";
 const employeesGrid = document.querySelector("#employees-grid");
 
 function getAvatarUrl(employeeId) {
-  return `https://i.pravatar.cc/80?img=${employeeId}`;
+  return `../../img/employees/employee${employeeId}.png`;
 }
 
 export function renderEmployees(employees) {
@@ -13,10 +13,12 @@ export function renderEmployees(employees) {
   employees.forEach((employee) => {
     employeesGrid.innerHTML += `
       <article class="employee-card">
-        <img src="${getAvatarUrl(employee.id)}" alt="${employee.name}">
+        <img class="employee-card__avatar" src="${getAvatarUrl(employee.id)}" alt="${employee.name}">
         <h2>${employee.name}</h2>
-        <a href="mailto:${employee.email}">${employee.email}</a>
-        <p>
+        <a class="employee-card__email" href="mailto:${employee.email}">${employee.email}</a>
+        <p class="employee-card__phone">${employee.phone}</p>
+        <span class="employee-card__label">Location</span>
+        <p class="employee-card__address">
           ${employee.address.street}, ${employee.address.suite}, 
           ${employee.address.city}, ${employee.address.zipcode}
         </p>
