@@ -53,7 +53,7 @@ npm run sass
 
 ## Uso
 
-Puedes probar la aplicación desde GitHub Pages usando las credenciales demo.
+Puede probar la aplicación desde GitHub Pages usando las credenciales demo.
 
 ## Credenciales demo
 
